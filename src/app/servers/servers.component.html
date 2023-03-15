@@ -1,6 +1,11 @@
 <label>Server Name</label>
-<input type="text" class="form-control" (input)="onUpdatedServerName($event)" />
-<p>{{ serverName }}</p>
+
+<!-- Passing and Using Data with Event Binding
+<input type="text" class="form-control" (input)="onUpdatedServerName($event)" /> -->
+
+<!-- Two Way Data Binding -- Combine Property and Event Binding, must use ngModel directive; triggers event and updates value in the component automatically, also updates the value if used somewhere else, reacts to changes.-->
+<input type="text" class="form-control" [(ngModel)]="serverName" />
+<!-- <p>{{ serverName }}</p> -->
 
 <button
   class="btn btn-primary"
